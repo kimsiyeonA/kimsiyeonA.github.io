@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     font-family: "Open Sans";
@@ -57,22 +58,26 @@ h3{
     color: white;
     /****/
     height: 480px;
-    position: relative;   
+}
+.max-w{
+    position: relative; /* 🔥 기준을 여기로 */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .profile .profile-desc-p{
-    width: 500px;
+    max-width: 500px;
 }
 .profile img{
     display: block;
     width: 350px;
     position: absolute;
-    bottom: 0;
-    right: 10%;
+    top: 19px;
+    right: clamp(40px, 8vw, 120px);
 }
 
 .info{
     text-align: center;
-    margin: 3rem;
+    margin: 3rem auto;
 }
 .info h2{
     font-size: 2rem;
@@ -160,6 +165,7 @@ footer .icon i {
 
 @media screen and (max-width: 900px){
     .profile{
+        
         position: static;
         padding: 80px 10% 0px 10%;
         height: auto;
@@ -170,6 +176,7 @@ footer .icon i {
     .profile .profile-desc-p{
         margin: 0 auto 20px;
         font-size: 15px; 
+        width: none;
     }
     .profile img{
         margin:auto;
